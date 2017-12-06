@@ -1,0 +1,68 @@
+IO moveTillLeft()
+{
+  if(isWall left)
+    {
+      return
+    }
+  else
+    {
+      move left
+      moveTillLeft()
+      return
+    }
+}
+
+IO main()
+{
+  moveTillLeft()
+  moveTillUp()
+  writeMemInDiagonal()
+  return
+}
+
+IO moveTillUp()
+{
+  if(isWall up)
+    {
+      return
+    }
+  else
+    {
+      move up
+      if(isWall up)
+        {
+          return
+        }
+      else
+        {
+	  move up
+	  moveTillUp()
+	  return
+	}
+    }
+}
+
+IO writeMemInDiagonal()
+{
+  write
+  if(isWall right)
+    {
+      return
+    }
+  else
+    {
+      move right
+      if(isWall down)
+       {
+         return
+       }
+      else
+       {
+         move down
+	 lock
+	 writeMemInDiagonal()
+	 return
+       }
+    }
+}
+

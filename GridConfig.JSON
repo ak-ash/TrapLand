@@ -1,0 +1,10 @@
+{  "size": [10,10],
+   "robos": [
+       {"progName": "prog.rbt",
+	"pos": [2,1],
+	"rmem": [155,155,155]},
+       {"progName": "prog.rbt",
+	"pos": [5,6],
+	"rmem": [250,155,110]}
+   ]
+}
